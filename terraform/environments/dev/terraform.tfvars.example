@@ -1,0 +1,13 @@
+# Copy this file to terraform.tfvars and fill in the values
+# DO NOT commit terraform.tfvars to git
+
+aws_region   = "us-east-1"
+alert_email  = "your-email@example.com"
+
+# Database password (will be stored in AWS Secrets Manager)
+# Generate a strong password: openssl rand -base64 32
+db_master_password = "CHANGE_ME_STRONG_PASSWORD"
+
+# Docker images (update after pushing to ECR)
+api_image     = "ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/newscrape-api:latest"
+scraper_image = "ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/newscrape-scraper:latest"
